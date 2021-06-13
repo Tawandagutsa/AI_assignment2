@@ -1,0 +1,94 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<h1 style = " margin-left:350px"> CUSTOMER CHURN PREDICTOR</h1>
+<br>
+<form action="{{ url_for('server')}}" method="POST" >
+</div>
+    <div class="form-group">
+      <div class="col-xs-4">
+      <label for="exampleInputPassword1">Senior citizen?</label>
+      <input name ="SeniorCitizen" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+    </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-4">
+        <label for="exampleInputPassword1">Partner</label>
+        <input name ="Partner" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+          <label for="exampleInputPassword1">Dependants</label>
+          <input name ="Dependants" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+        </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-4">
+            <label for="exampleInputPassword1">Tenure</label>
+            <input name ="Tenure" type="number"class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+          </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-4">
+              <label for="exampleInputPassword1">OnlineSecurity</label>
+              <input name ="OnlineSecurity" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+            </div>
+            </div>
+          
+    <div class="form-group">
+      <div class="col-xs-4">
+    <label for="exampleInputPassword1">OnlineBackup</label>
+    <input name ="OnlineBackup" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+    </div>
+    </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+        <label for="exampleInputPassword1">DeviceProtection</label>
+        <input name ="DeviceProtection" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+    <div class="form-group">
+      <div class="col-xs-4">
+        <label for="exampleInputPassword1">TechSupport</label>
+        <input name ="TechSupport" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+        <label for="exampleInputPassword1">Contract</label>
+        <input name ="Contract" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+        <label for="exampleInputPassword1">PaperlessBilling</label>
+        <input name ="PaperlessBilling" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+        <label for="exampleInputPassword1">PaymentMethod</label>
+        <input name ="PaymentMethod" type="number" class="form-control" id="exampleInputPassword1" placeholder="(0: No,  1: Yes)">
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+        <label for="exampleInputPassword1">MonthlyCharges</label>
+        <input name ="MonthlyCharges" type="number" class="form-control" id="exampleInputPassword1" placeholder="">
+      </div>
+      </div>
+      <br>
+
+      <button type="submit" class="btn btn-primary" style="margin-top:2%; margin-left: 15px;">Submit</button>
+
+
+  </form>
+
+  <div class='result' >
+        <br><h3 style="margin-left:20px">Churn Prediction: {{ result }}</h3>  <br>
+        <h3 style="margin-left:20px">Confidence Factor: {{ confidence_factor }} </h3> 
+         <p style="font-size: 25px">
+    </div>
+
+{% endblock %}
